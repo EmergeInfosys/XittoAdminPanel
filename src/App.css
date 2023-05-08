@@ -1,38 +1,293 @@
-.App {
-  text-align: center;
+
+
+.section-bg{
+  background:#612690;
+ }
+ .section-padding
+ {
+  padding: 50px 0px;
+ }
+
+ /* Nav Bar  */
+
+ .navbar-brand img{
+  width: 100%;
+  height: 100px;
+ }
+.navbar{
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  background: #531682;
+  align-items: flex-start;
+  margin: 15px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: sticky;
+  top: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width:992px){
+  .navbar .container-fluid, .navbar-expand-lg .navbar-collapse, .navbar-expand-lg .navbar-nav{
+    flex-direction: column;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+@media screen and (max-width:992px){
+  .navbar{
+    height:auto;
+    background: #531682;
+  }
+}
+
+.nav-item .nav-link{
+ position: relative;
+ display: block;
+ transition: 0.5s;
+ color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  transition: 0.5s ease;
+  padding: 10px 0px;
+
+}
+
+.nav-item .nav-link:hover{
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #ffffff 0%, #e954e2 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+/* .nav-item .nav-link::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  top: 100%;
+  left: 0;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+ }
+ 
+
+ .nav-item .nav-link:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+ }  */
+
+
+ .dropdown .dropdown-menu{
+  left: -25%;
+  background: #612690;
+ }
+
+ /* .dropdown:hover>.dropdown-menu {
+  display: block;
+  left: -35%;
+}
+
+.dropdown >.dropdown-toggle:active {
+    pointer-events: none;
+} */
+
+
+
+.dropdown-item{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #ffffff;
+  background-color: transparent;
+  letter-spacing: 1px;
+}
+
+
+/* topbar */
+.topbar{
+  position: sticky;
+  top: 0px;
+  margin: 15px 15px 0px 4px;
+  height: 60px;
+  background: #531682;
+  border-top-right-radius: 20px;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  z-index: 999;
 }
 
-.App-link {
-  color: #61dafb;
+.topbar .text h1{
+  color:#fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+  /* btn */
+  .dropdown-toggle{
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .dropdown-toggle:hover{
+   
+    color: #ffffff;
+   
+  }
+
+  /* Login  */
+  .bg{
+    height: 100vh;
+    background-image: url("/build/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .login{
+    position: relative;
+    padding: 60px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    width:100%;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+  }
+  .login h2{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 45px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+  .login .inputBox{
+    position: relative;
+  }
+
+  .login .inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-size: 1.25em;
+    color:#531682;
+    border-radius: 5px;
+    border: none;
+    margin: 15px 0px;
+    /* background: transparent; */
+  }
+  .login .inputBox input::placeholder{
+    color:#531682;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .login .inputBox .submit-btn{
+    position: relative;
+    border: none;
+    outline: none;
+    background: #424141;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.25em;
+    font-weight: 500;
+    translate: 0.5s;
+  }
+
+  .login .inputBox .submit-btn:hover{
+
+    background: #531682;
+    
+  }
+
+  .loginHeading
+  {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    
+  }
+
+  .loginImg{
+    width: 100%;
+    height: auto;
+  }
+
+  .loginCard{
+    background: #8924d7!important;
+    border-radius: 25px;
+    box-shadow: none!important;
+    border: none;
+  }
+  .login-btn{
+    float: right;
+    background: #fff;
+    color: #531682;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 15px;
+    transition: .5s ease;
+    text-decoration: none;
+  }
+
+  .login-btn:hover{
+    background: #531682;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+
+
+  /* Card  */
+  .card{
+    color: #fff;
+    background: #531682;
+    /* backdrop-filter: blur(15px); */
+    border: none;
+    border-radius: 25px;
+    padding: 30px 15px;
+    /* box-shadow: 0px 0px 10px 0px #fff; */
+  }
+
+
+  /* Form  */
+  .form-label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #fff;
+    font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-control:focus {
+  color: #531682;
+  background-color: var(--bs-body-bg);
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.service__img
+{
+  width: 80px;
+  height: 80px;
 }
